@@ -9,20 +9,48 @@ $xmlRoot = $domtree->createElement("xml");
 /* append it to the document created */
 $xmlRoot = $domtree->appendChild($xmlRoot);
 
-
 $gender = $_POST['gender'];
 $website = $_POST['website'];
 $address = $_POST['address'];
 $name = $_POST["name"];
 $tel = $_POST['telephone'];
 $email = $_POST['email'];
-$_SESSION["userdata"]= $arry;
+
 $awardsTitle = $_POST["titleAw"];
 $yearAw = $_POST["yearAw"];
 $skills = $_POST["skills"];
 $jobs = $_POST["jobs"];
 $title = $_POST["title"];
 $period = $_POST["period"];
+$root = $xmlRoot->appendChild($domtree->createElement("cv"));
+$root->appendChild($domtree->createElement("name",$name));
+$root->appendChild($domtree->createElement("gender",$gender));
+$root->appendChild($domtree->createElement("website",$website));
+$root->appendChild($domtree->createElement("address",$address));
+$root->appendChild($domtree->createElement("telephone",$tel));
+$root->appendChild($domtree->createElement("email",$email));
+if(isset( $_POST["titleAw"])){
+    $award = $root->appendChild($domtree->createElement("awards"));
+    $award->appendChild($domtree->createElement("title",$awardsTitle));
+    $award->appendChild($domtree->createElement("year",$yearAw));
+}
+
+$skillr= $root->appendChild($domtree->createElement("skills"));
+foreach ($skills as $skill){
+    $skillr->appendChild($domtree->createElement("skill",$skill));
+}
+$jobr= $root->appendChild($domtree->createElement("jobs"));
+foreach ($jobs as $key=>$value){
+    if($value!=null){
+        $jobr->appendChild($domtree->createElement("name",$jobs[$key]));
+        $jobr->appendChild($domtree->createElement("title",$title[$key]));
+        $jobr->appendChild($domtree->createElement("period",$period[$key]));
+    }
+
+}
+//echo $domtree->saveXML();
+$domtree->save('cv.xml');
+header("Location: FBForm.php");
 
 
 //

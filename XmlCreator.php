@@ -14,15 +14,18 @@ $pass = $_POST['password'];
 
 $arry = ["uname"=>$uname,"pass"=>$pass];
 $_SESSION["userdata"]= $arry;
+$userRoot = $xmlRoot->appendChild($domtree->createElement("userDetails"));
+$userRoot->appendChild($domtree->createElement("username",$uname));
+$userRoot->appendChild($domtree->createElement("password",$pass));
+$root = $xmlRoot->appendChild($domtree->createElement("transcript"));
 
-$currentUser = $domtree->createElement("userName",$uname);
-$currentUser = $xmlRoot->appendChild($currentUser);
+
 $school = $_POST['school'];
 $nameorg = $_POST["membership"];
 $title = $_POST["title"];
 $description = $_POST["description"];
 $period = $_POST["period"];
-$memb= $currentUser->appendChild($domtree->createElement("membershipName",$nameorg));
+$memb= $root->appendChild($domtree->createElement("membershipName",$nameorg));
 $memb->appendChild($domtree->createElement("title",$title));
 $memb->appendChild($domtree->createElement("description",$description));
 $memb->appendChild($domtree->createElement("period",$period));
@@ -40,7 +43,8 @@ foreach ($school as $keyS=> $val){
         $keywordExtra =$_POST['keywordExtra'.$keyS];
         $gradYearExtra = $_POST['gradYearExtra'.$keyS];
     }
-    $school = $currentUser->appendChild($domtree->createElement("school",$val));
+    $school= $root->appendChild($domtree->createElement("schools"));
+    $school->appendChild($domtree->createElement("school",$val));
     foreach ($subject as $key=>$value){
         $school->appendChild($domtree->createElement("subject",$subject[$key]));
         $school->appendChild($domtree->createElement("yearStarted",$yStart[$key]));
@@ -49,11 +53,12 @@ foreach ($school as $keyS=> $val){
         $school->appendChild($domtree->createElement("grade",$grade[$key]));
         $school->appendChild($domtree->createElement("gradYear",$gradYear[$key]));
     }
+    $extra = $school->appendChild($domtree->createElement("extraSubjects"));
     if($subExtra!= null) {
         foreach ($subExtra as $key => $value) {
-            $school->appendChild($domtree->createElement("subjectExtra", $subExtra[$key]));
-            $school->appendChild($domtree->createElement("keywordExtra", $keywordExtra[$key]));
-            $school->appendChild($domtree->createElement("gradYearExtra", $gradYearExtra[$key]));
+            $extra->appendChild($domtree->createElement("subjectExtra", $subExtra[$key]));
+            $extra->appendChild($domtree->createElement("keywordExtra", $keywordExtra[$key]));
+            $extra->appendChild($domtree->createElement("gradYearExtra", $gradYearExtra[$key]));
         }
     }
 }

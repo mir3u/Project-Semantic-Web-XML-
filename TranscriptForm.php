@@ -50,10 +50,10 @@
 
         <h4>Educational Background</h4>
         <div class="form-group">
-            <label>Name Org</label><input type="text" placeholder="membership" name="membership" label="membership">
-            <label>Title</label><input type="text" placeholder="title" name="title" label="title">
-            <label>Description</label><input type="text" placeholder="description" name="description" label="description">
-            <label>Period</label><input type="text" placeholder="period" name="period" label="period">
+            <label>Name Org</label><input type="text" placeholder="membership" name="membership" label="membership"><br>
+            <label>Title</label><input type="text" placeholder="title" name="title" label="title"><br>
+            <label>Description</label><input type="text" placeholder="description" name="description" label="description"><br>
+            <label>Period</label><input type="text" placeholder="period" name="period" label="period"><br>
         </div>
         <div class="form-group ">
             <h5 >Schools Graduated</h5>
@@ -93,11 +93,11 @@
                 let m=x-1;
                 console.log(m);
                 $('.container1').append('<div><label>Subject Studied '+i+'</label> <input type="text" placeholder="Semantic Web" name="subjects'+m+'[]"/>'+
-                '<label>Year Started</label> <input type="text" placeholder="2019" name="yearStarted'+m+'[]"/>'+
-                '<label>Year Ended</label> <input type="text" placeholder="2020" name="yearEnded'+m+'[]"/>'+
-                    '<label>Keywords</label> <input type="text" placeholder="seweb" name="keyword'+m+'[]"/>'+
-                    '<label>Grades</label> <input type="text" placeholder="9" name="grade'+m+'[]"/>' +
-                    '<label>Year Of Graduation</label> <input type="text" placeholder="9" name="gradYear'+m+'[]"/>' +
+                '<br>Year Started</label> <input type="text" placeholder="2019" name="yearStarted'+m+'[]"/><br>'+
+                '<label>Year Ended</label> <input type="text" placeholder="2020" name="yearEnded'+m+'[]"/><br>'+
+                    '<label>Keywords</label> <input type="text" placeholder="seweb" name="keyword'+m+'[]"/><br>'+
+                    '<label>Grades</label> <input type="text" placeholder="9" name="grade'+m+'[]"/><br>' +
+                    '<label>Year Of Graduation</label> <input type="text" placeholder="9" name="gradYear'+m+'[]"/><br>' +
                     '<a href="#" class="delete">X</a></div>');
             }
         });
@@ -108,8 +108,8 @@
                 j++;
                 let m=x-1;
                 $('.container1').append('<div><label>Extra Subject Studied '+i+'</label> <input type="text" placeholder="Semantic Web" name="subjectsExtra'+m+'[]"/>'+
-                    '<label>Keywords</label> <input type="text" placeholder="seweb" name="keywordExtra'+m+'[]"/>'+
-                    '<label>Year Of Graduation</label> <input type="text" placeholder="9" name="gradYearExtra'+m+'[]"/>' +
+                    '<br><label>Keywords</label> <input type="text" placeholder="seweb" name="keywordExtra'+m+'[]"/>'+
+                    '<br><label>Year Of Graduation</label> <input type="text" placeholder="9" name="gradYearExtra'+m+'[]"/>' +
                     '<a href="#" class="delete">X</a></div>');
             }
         });
