@@ -41,57 +41,14 @@ foreach ($skills as $skill){
 }
 $jobr= $root->appendChild($domtree->createElement("jobs"));
 foreach ($jobs as $key=>$value){
+    $jobi= $root->appendChild($domtree->createElement("job"));
     if($value!=null){
-        $jobr->appendChild($domtree->createElement("name",$jobs[$key]));
-        $jobr->appendChild($domtree->createElement("title",$title[$key]));
-        $jobr->appendChild($domtree->createElement("period",$period[$key]));
+        $jobi->appendChild($domtree->createElement("name",$jobs[$key]));
+        $jobi->appendChild($domtree->createElement("title",$title[$key]));
+        $jobi->appendChild($domtree->createElement("period",$period[$key]));
     }
 
 }
 //echo $domtree->saveXML();
 $domtree->save('cv.xml');
 header("Location: FBForm.php");
-
-
-//
-//
-//$xslstr = '<xsl:transform xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-//               <xsl:output version="1.0" encoding="UTF-8" indent="yes" />
-//               <xsl:strip-space elements="*"/>
-//
-//                    <xsl:template match="@*|node()">
-//                      <xsl:copy>
-//                        <xsl:apply-templates select="@*|node()"/>
-//                      </xsl:copy>
-//                    </xsl:template>
-//
-//                        <xsl:copy>
-//                            <name>'.$name.'</name>
-//                            <gender>'.$gender.'</gender>
-//                            <website>'.$website.'</website>
-//                            <address>'.$address.'</address>
-//                            <telephone>'.$tel.'</telephone>
-//                            <email>'.$email.'</email>
-//                            <skills> <skill>'.$skills[0].'</skill>
-//                            <skill>'.$skills[1].'</skill>
-//                            <skill>'.$skills[2].'</skill>
-//                            </skills>
-//                            <awards><title>'.$awardsTitle.'</title>
-//                            <year>'.$yearAw.'</year></awards>
-//
-//                        </xsl:copy>
-//                    </xsl:template>
-//
-//                </xsl:transform>';
-//$xml=simplexml_load_file("cv.xml") or die("Error: Cannot Create Object");
-//
-//
-//$xsl = new DOMDocument;
-//$xsl->loadXML($xslstr);
-//
-//// Configure the transformer
-//$proc = new XSLTProcessor;
-//$proc->importStyleSheet($xsl);
-//
-//// Transform XML source
-//$newXml = $proc->transformToXML($xml);
