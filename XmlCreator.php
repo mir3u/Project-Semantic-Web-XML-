@@ -4,17 +4,26 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 $fh = fopen("transcript.xml", 'w') or exec(dirname(__FILE__) . '/MakeXMLFile.sh');
+
 $domtree = new \DOMDocument('1.0', 'UTF-8');
 
 /* create the root element of the xml tree */
 $xmlRoot = $domtree->createElement("xml");
 /* append it to the document created */
 $xmlRoot = $domtree->appendChild($xmlRoot);
+
 $uname = $_POST['username'];
 $pass = $_POST['password'];
+$xmljobs = new DOMDocument("1.0","UTF-8");
+$xmljobs->load('users.xml');
+$domtree1 = $xmljobs->getElementsByTagName("users")->item(0);
+$root->appendChild($domtree1->createElement("user",$uname));
+$domtree1->save("users.xml");
+
 $_SESSION['usr'] = $uname;
 $arry = ["uname"=>$uname,"pass"=>$pass];
 $_SESSION["userdata"]= $arry;
+
 $userRoot = $xmlRoot->appendChild($domtree->createElement("userDetails"));
 $userRoot->appendChild($domtree->createElement("username",$uname));
 $userRoot->appendChild($domtree->createElement("password",$pass));
@@ -46,14 +55,14 @@ foreach ($school as $keyS=> $val){
     }
     $school= $root->appendChild($domtree->createElement("schools"));
     $school->appendChild($domtree->createElement("school",$val));
-    $subject= $root->appendChild($domtree->createElement("subjects"));
+    $subjecti= $root->appendChild($domtree->createElement("subjects"));
     foreach ($subject as $key=>$value){
-        $subject->appendChild($domtree->createElement("subject",$subject[$key]));
-        $subject->appendChild($domtree->createElement("yearStarted",$yStart[$key]));
-        $subject->appendChild($domtree->createElement("yearEnded",$yEnd[$key]));
-        $subject->appendChild($domtree->createElement("keyword",$keyword[$key]));
-        $subject->appendChild($domtree->createElement("grade",$grade[$key]));
-        $subject->appendChild($domtree->createElement("gradYear",$gradYear[$key]));
+        $subjecti->appendChild($domtree->createElement("subject",$subject[$key]));
+        $subjecti->appendChild($domtree->createElement("yearStarted",$yStart[$key]));
+        $subjecti->appendChild($domtree->createElement("yearEnded",$yEnd[$key]));
+        $subjecti->appendChild($domtree->createElement("keyword",$keyword[$key]));
+        $subjecti->appendChild($domtree->createElement("grade",$grade[$key]));
+        $subjecti->appendChild($domtree->createElement("gradYear",$gradYear[$key]));
     }
     $extra = $school->appendChild($domtree->createElement("extraSubjects"));
     if($subExtra!= null) {

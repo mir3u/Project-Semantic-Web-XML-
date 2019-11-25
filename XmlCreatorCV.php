@@ -41,14 +41,13 @@ foreach ($skills as $skill){
 }
 $jobr= $root->appendChild($domtree->createElement("jobs"));
 foreach ($jobs as $key=>$value){
-    $jobi= $root->appendChild($domtree->createElement("job"));
     if($value!=null){
+    $jobi= $root->appendChild($domtree->createElement("job"));
         $jobi->appendChild($domtree->createElement("name",$jobs[$key]));
         $jobi->appendChild($domtree->createElement("title",$title[$key]));
         $jobi->appendChild($domtree->createElement("period",$period[$key]));
     }
 
 }
-//echo $domtree->saveXML();
 $domtree->save('cv.xml');
 header("Location: FBForm.php");

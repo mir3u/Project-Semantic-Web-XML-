@@ -23,9 +23,16 @@
                 <li class="nav-item">
                     <a class="nav-link" href="index.php">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="register.php">Register</a>
+                <?php if(isset($_SESSION["user"])){
+                    echo "  <li class=\"nav-item\"> <a class=\"nav-link\" href=\"logout.php\">Logout</a>";
+                }else echo "
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"TranscriptForm.php\">Register</a>
                 </li>
+                 <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"login.php\">Login</a>
+                </li>";
+                ?>
             </ul>
         </div>
     </div>
@@ -49,6 +56,7 @@
 
 
         <h4>Educational Background</h4>
+        <h5>Memberships</h5>
         <div class="form-group">
             <label>Name Org</label><input type="text" placeholder="membership" name="membership" label="membership"><br>
             <label>Title</label><input type="text" placeholder="title" name="title" label="title"><br>

@@ -23,9 +23,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">Home</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="register.php">Register</a>
-                    </li>
+                    <?php if(isset($_SESSION["user"])){
+                        echo "  <li class=\"nav-item\"> <a class=\"nav-link\" href=\"logout.php\">Logout</a>";
+                    }else echo "
+                <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"TranscriptForm.php\">Register</a>
+                </li>
+                 <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"login.php\">Login</a>
+                </li>";
+                    ?>
                 </ul>
             </div>
         </div>

@@ -29,6 +29,9 @@
                 }else echo "
                 <li class=\"nav-item\">
                     <a class=\"nav-link\" href=\"TranscriptForm.php\">Register</a>
+                </li>
+                 <li class=\"nav-item\">
+                    <a class=\"nav-link\" href=\"login.php\">Login</a>
                 </li>";
                 ?>
             </ul>
@@ -36,31 +39,30 @@
     </div>
 </nav>
 <br><br> <br>
-<div class="container-fluid col-md-4 ">
-<!--    <h5> Extra courses </h5>-->
+<div class="container-fluid col-md-6 ">
+
     <?php
     $user =$_SESSION["user"];
     $xml=simplexml_load_file($user."Output.xml") or die("Error: Cannot create object");
-//    die(var_dump($xml));
-//    var_dump($xml->xpath("/user/xml/userDetails/username/text()[.='".$user."']"));
-//    die(var_dump($xml->xpath("/user/xml/transcript/schools/subject/keyword/text()='programming'")));
-
-    $result = $xml->xpath("/user/xml/transcript/schools/subject/keyword/text()='programming'");
+    $result = $xml->xpath("//subjects/subject/keyword/text()='programming'");
     echo "<h5> The number of subjects related to technologies ". count($result)."</h5>";
    $result = $xml->xpath("/user/xml/transcript/schools/extraSubjects/gradYearExtra/text()");
    $subj = $xml->xpath("/user/xml/transcript/schools/extraSubjects/subjectExtra/text()");
 
    echo "<h4> The extra courses: </h4>";
+   $i = count($result);
+   $j=0;
    foreach ($result as $key=>$value){
-       if($value<=2019-3){
-           echo "<h5 style=\"color:orange\">".$subj[$key]."</h5>";
-       }else{
-           echo "<h5 style=\"color:MediumSeaGreen\">". $subj[$key]. " </h5>";
-               break;
+       if($j!=$i/2) {
+           if ($value <= 2019 - 3) {
+               echo "<h5 style=\"color:orange\">" . $subj[$key] . "</h5>";
+           } else {
+               echo "<h5 style=\"color:MediumSeaGreen\">" . $subj[$key] . " </h5>";
            }
+           $j++;
+       }
    }
-    $result0 = $xml->xpath('//jobs/name');
-
+    $result0 = $xml->xpath('//jobs/job/name/text()');
     if(count($result0) != 0) {
         foreach ($result0 as $p) {
             echo '<h5>Job: <a href="delete.php?id='.$p.'">' . $p . '</a></h5>';
@@ -79,9 +81,21 @@
     $xml1=simplexml_load_file("Output.xml") or die("Error: Cannot create object");
     $interests = $xml1->xpath("//interests/interest/text()[.='programming']");
     echo "<h5> People interested in programming: ". count($interests)."</h5>";
-    $extra =$xml1->xpath(" //extraSubjects/subjectExtra/text()");
+    $xmlusers = simplexml_load_file("users.xml") or die("Error: Cannot create object");
+    $users = $xmlusers->xpath("//user/text()");
 
-//    die(var_dump($xml->xpath("/user/xml/schools/extraSubjects/subjectExtra/")));
+ echo "<h5> Name of users interested in programming and their extra courses : </h5> <ul>";
+   foreach ($users as $useri){
+       $xmls = simplexml_load_file($useri."Output.xml") or die("Error: Cannot create object");
+       if($xmls->xpath("//interests/interest/text()[.='programming']")!= null || $xmls->xpath("//interests/interest/text()[.='programming']")!= false){
+           $name = $xmls->xpath("//username/text()");
+           $extra = $xmls->xpath("//extraSubjects/subjectExtra/text()");
+           echo "<li> <label><b> Name: ".$name[0]."</b></label></li>";
+           foreach ($extra as $ex){
+               echo "<li> <label> Extra Course: ".$ex."</label></li>";
+           }
+       }
+   }
     ?>
 </div>
 <script>
