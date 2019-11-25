@@ -5,7 +5,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="/styles.css">
         <meta charset="UTF-8">
@@ -39,10 +39,10 @@
     </nav>
     <br><br> <br>
     <div class="container-fluid col-md-4 ">
-        <a href='download.php?file=transcript.xml'>Transcript</a><br>
-        <a href='download.php?file=cv.xml'>CV</a><br>
-        <a href='download.php?file=fb.xml'>Facebook</a><br>
-       <button> <a href="upload.php">Upload Files</a></button>
+        <a style="margin: 10px;" href='download.php?file=transcript.xml'>Transcript</a><br>
+        <a  style="margin: 10px;" href='download.php?file=cv.xml'>CV</a><br>
+        <a style="margin: 10px;" href='download.php?file=fb.xml'>Facebook</a><br>
+       <button style="margin: 10px;"> <a href="upload.php">Upload Files</a></button>
     </div>
 
     </body>

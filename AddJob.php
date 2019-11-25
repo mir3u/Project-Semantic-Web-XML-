@@ -1,6 +1,6 @@
 <?php
 session_start();
-$user = $_POST['user'];
+$user = $_SESSION['user'];
 $xml = new DOMDocument("1.0","UTF-8");
 $xml->load($user.'Output.xml');
 $jobName = $_POST["jobs"];
@@ -10,7 +10,6 @@ $period = $_POST['period'];
 $xml->getElementById('root');
 $jobi = $xml->getElementsByTagName("jobs")->item(0);
 $jobs = $jobi->appendChild($xml->createElement("job"));
-
 if(isset($jobName)) {
     foreach ($jobName as $key => $job) {
         $jobs->appendChild($xml->createElement("name", $job));
@@ -18,6 +17,8 @@ if(isset($jobName)) {
         $jobs->appendChild($xml->createElement("period", $period[$key]));
     }
 }
+
 $xml->formatoutput = true;
-$xml->save($user. "Output.xml");
+$xml->save($user."Output.xml");
+var_dump($xml);
 header("Location: info.php");

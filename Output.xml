@@ -2,96 +2,91 @@
 <user>
   <xml>
     <userDetails>
-      <username>john</username>
+      <username>mary</username>
       <password>123</password>
     </userDetails>
     <transcript>
-      <membershipName>
-        <title/>
-        <description/>
-        <period/>
-      </membershipName>
+      <membershipName>Something Good<title>President</title><description>did things</description><period>2018-</period></membershipName>
       <schools>
-        <school>UCLA</school>
+        <school>Poli</school>
         <extraSubjects>
-          <subjectExtra>Movie</subjectExtra>
-          <keywordExtra>art</keywordExtra>
-          <gradYearExtra>2017</gradYearExtra>
-          <subjectExtra>Semantics</subjectExtra>
-          <keywordExtra>technology</keywordExtra>
-          <gradYearExtra>2018</gradYearExtra>
+          <subjectExtra>Cookie</subjectExtra>
+          <keywordExtra>love</keywordExtra>
+          <gradYearExtra>2019</gradYearExtra>
         </extraSubjects>
       </schools>
-      <subjects/>
+      <subjects>
+        <subject>Semantic Web</subject>
+        <yearStarted>2019</yearStarted>
+        <yearEnded>2020</yearEnded>
+        <keyword>technology</keyword>
+        <grade>10</grade>
+        <gradYear>2020</gradYear>
+      </subjects>
     </transcript>
   </xml>
   <xml>
     <cv>
-      <name>John Snow</name>
-      <gender>male</gender>
-      <website>snow.com</website>
-      <address>street 4 San Francisco</address>
-      <telephone>83728263838</telephone>
-      <email>snow@snow.com</email>
+      <name>Mary Jules</name>
+      <gender>female</gender>
+      <website>Jules.com</website>
+      <address>Stefan Stokca 20,bl17a,sc B, 65</address>
+      <telephone>+40729494427</telephone>
+      <email>jules@gmail.com</email>
       <awards>
-        <title>AI Master</title>
-        <year>2019</year>
+        <title/>
+        <year/>
       </awards>
       <skills>
         <skill>programming</skill>
-        <skill>AI</skill>
-        <skill>Fimography</skill>
+        <skill>paiting</skill>
+        <skill>dancing</skill>
       </skills>
-      <jobs/>
+      <jobs>
       <job>
-        <name>Google</name>
-        <title>ML Engineer</title>
-        <period>2019-</period>
+        <name>SW inc</name>
+        <title>Junior DevOps</title>
+        <period>2017-2018</period>
       </job>
       <job>
-        <name>Facebook</name>
-        <title>Junion ML Engineer</title>
-        <period>2017-2019</period>
+        <name>Cookie SRL</name>
+        <title>DevOps</title>
+        <period>2018-</period>
       </job>
+      <job><name>miri</name><title>bla</title><period>bla</period></job><job><name>sad</name><title>asdas</title><period>das</period></job><job><name>sad</name><title>as</title><period>2015</period></job></jobs>
     </cv>
   </xml>
   <xml>
     <fb>
-      <name>John Snow</name>
+      <name>Mary Jules</name>
       <interests>
         <interest>programming</interest>
-        <interest>Game Of Thrones</interest>
-        <interest>Filmography</interest>
-        <interest>Being a Genius</interest>
+        <interest>dancing</interest>
+        <interest>cookie</interest>
       </interests>
     </fb>
   </xml>
   <user>
     <xml>
       <userDetails>
-        <username>andrei</username>
+        <username>john</username>
         <password>123</password>
       </userDetails>
       <transcript>
-        <membershipName>AISEC<title>PR Responsible</title><description>Promoting the organization</description><period>2012-2014</period></membershipName>
+        <membershipName>
+          <title/>
+          <description/>
+          <period/>
+        </membershipName>
         <schools>
-          <school>University Of Bucharest</school>
+          <school>UCLA</school>
           <extraSubjects>
-            <subjectExtra>Filosophy</subjectExtra>
-            <keywordExtra>umaniaries</keywordExtra>
-            <gradYearExtra>2015</gradYearExtra>
-          </extraSubjects>
-        </schools>
-        <subjects/>
-        <schools>
-          <school>Alexandru Cuza High School</school>
-          <extraSubjects>
-            <subjectExtra>Logic</subjectExtra>
-            <keywordExtra>umanitaries</keywordExtra>
-            <gradYearExtra>2012</gradYearExtra>
-            <subjectExtra>Robotics</subjectExtra>
+            <subjectExtra>Movie</subjectExtra>
+            <keywordExtra>art</keywordExtra>
+            <gradYearExtra>2017</gradYearExtra>
+            <subjectExtra>Semantics</subjectExtra>
             <keywordExtra>technology</keywordExtra>
-            <gradYearExtra>2012</gradYearExtra>
+            <gradYearExtra>2018</gradYearExtra>
           </extraSubjects>
         </schools>
         <subjects/>
@@ -99,191 +94,111 @@
     </xml>
     <xml>
       <cv>
-        <name>Andrei Ionescu</name>
+        <name>John Snow</name>
         <gender>male</gender>
-        <website>andrei.com</website>
-        <address>Stefan Stoika no. 20,bl 17a, scB ap65 et 4 sector 1</address>
-        <telephone>+40729494427</telephone>
-        <email>andrei.ionescu@gmail.com</email>
+        <website>snow.com</website>
+        <address>street 4 San Francisco</address>
+        <telephone>83728263838</telephone>
+        <email>snow@snow.com</email>
         <awards>
-          <title/>
-          <year/>
+          <title>AI Master</title>
+          <year>2019</year>
         </awards>
         <skills>
           <skill>programming</skill>
-          <skill>robotics</skill>
-          <skill>bioinformatics</skill>
+          <skill>AI</skill>
+          <skill>Fimography</skill>
         </skills>
         <jobs/>
         <job>
-          <name>Cats SRL</name>
-          <title>Machine Learning Enginer</title>
-          <period>2015-</period>
+          <name>Google</name>
+          <title>ML Engineer</title>
+          <period>2019-</period>
         </job>
-        <job/>
-        <job/>
-        <job/>
+        <job>
+          <name>Facebook</name>
+          <title>Junion ML Engineer</title>
+          <period>2017-2019</period>
+        </job>
       </cv>
     </xml>
     <xml>
       <fb>
-        <name>Andrei Ionescu</name>
+        <name>John Snow</name>
         <interests>
-          <interest>technology</interest>
           <interest>programming</interest>
-          <interest>cats</interest>
-          <interest>dogs</interest>
-          <interest>cookie</interest>
+          <interest>Game Of Thrones</interest>
+          <interest>Filmography</interest>
+          <interest>Being a Genius</interest>
         </interests>
       </fb>
     </xml>
     <user>
       <xml>
         <userDetails>
-          <username>mirri</username>
+          <username>andrei</username>
           <password>123</password>
         </userDetails>
         <transcript>
-          <membershipName>best<title>fr</title><description>money</description><period>2017-2019</period></membershipName>
+          <membershipName>AISEC<title>PR Responsible</title><description>Promoting the organization</description><period>2012-2014</period></membershipName>
           <schools>
-            <school>Poli University</school>
-            <subject>Sem Web</subject>
-            <yearStarted>2019</yearStarted>
-            <yearEnded>2020</yearEnded>
-            <keyword>technology</keyword>
-            <grade>5</grade>
-            <gradYear>2020</gradYear>
-            <subject>WAD</subject>
-            <yearStarted>2019</yearStarted>
-            <yearEnded>2019</yearEnded>
-            <keyword>technology</keyword>
-            <grade>9</grade>
-            <gradYear>2019</gradYear>
+            <school>University Of Bucharest</school>
             <extraSubjects>
-              <subjectExtra>More</subjectExtra>
-              <keywordExtra>math</keywordExtra>
-              <gradYearExtra>2020</gradYearExtra>
+              <subjectExtra>Filosophy</subjectExtra>
+              <keywordExtra>umaniaries</keywordExtra>
+              <gradYearExtra>2015</gradYearExtra>
             </extraSubjects>
           </schools>
+          <subjects/>
+          <schools>
+            <school>Alexandru Cuza High School</school>
+            <extraSubjects>
+              <subjectExtra>Logic</subjectExtra>
+              <keywordExtra>umanitaries</keywordExtra>
+              <gradYearExtra>2012</gradYearExtra>
+              <subjectExtra>Robotics</subjectExtra>
+              <keywordExtra>technology</keywordExtra>
+              <gradYearExtra>2012</gradYearExtra>
+            </extraSubjects>
+          </schools>
+          <subjects/>
         </transcript>
       </xml>
       <xml>
         <cv>
-          <name>Miruna Gherasim</name>
-          <gender>female</gender>
-          <website>miru.com</website>
-          <address>Stefan Stokca 20,bl17a,sc B, 65</address>
+          <name>Andrei Ionescu</name>
+          <gender>male</gender>
+          <website>andrei.com</website>
+          <address>Stefan Stoika no. 20,bl 17a, scB ap65 et 4 sector 1</address>
           <telephone>+40729494427</telephone>
-          <email>mirunaalexandra97@gmail.com</email>
+          <email>andrei.ionescu@gmail.com</email>
           <awards>
             <title/>
             <year/>
           </awards>
           <skills>
             <skill>programming</skill>
-            <skill>paiting</skill>
-            <skill>PHP</skill>
+            <skill>robotics</skill>
+            <skill>bioinformatics</skill>
           </skills>
-          <jobs>
-            <name>Miru srl</name>
-            <title>Junior DevOps</title>
-            <period>2019-</period>
-            <name>Bunny srl</name>
-            <title>Junior Web Programmer</title>
-            <period>2015-1029</period>
-            <job>aaa</job>
-            <title>aa</title>
-            <title>aa</title>
-            <job>miri</job>
-            <title>mm</title>
-            <title>as</title>
-            <job>ed</job>
-            <title>afefe</title>
-            <title>af</title>
-            <job>safd</job>
-            <title>aef</title>
-            <title>aef</title>
-            <job>dadw</job>
-            <title>wdad</title>
-            <title>dwa</title>
-            <job>sad</job>
-            <title>das</title>
-            <title>dsa</title>
-            <job>dasd</job>
-            <title>das</title>
-            <title>das</title>
-            <job>dasd</job>
-            <title>sad</title>
-            <title>sad</title>
-            <job>
-              <name>das</name>
-              <title>das</title>
-              <title>da</title>
-            </job>
-            <job>
-              <name>sad</name>
-              <title>das</title>
-              <title>dsad</title>
-            </job>
-            <job>
-              <name>fds</name>
-              <title>dsad</title>
-              <title>daed</title>
-            </job>
-            <job>
-              <name>ASDFF</name>
-              <title>ASD</title>
-              <title>ADSF</title>
-            </job>
-            <job>
-              <name>dasdas</name>
-              <title>sad</title>
-              <title>dsad</title>
-            </job>
-            <job>
-              <name>dasdas</name>
-              <title>sad</title>
-              <title>dsad</title>
-            </job>
-            <job>
-              <name>dasdas</name>
-              <title>sad</title>
-              <title>dsad</title>
-            </job>
-            <job>
-              <name>dasdas</name>
-              <title>sad</title>
-              <title>dsad</title>
-            </job>
-            <job>
-              <name>dasdas</name>
-              <title>sad</title>
-              <title>dsad</title>
-            </job>
-            <job>
-              <name>dasdas</name>
-              <title>sad</title>
-              <title>dsad</title>
-            </job>
-            <job>
-              <name>dasdas</name>
-              <title>sad</title>
-              <title>dsad</title>
-            </job>
-            <job>
-              <name>dasd</name>
-              <title>dsad</title>
-              <title>das</title>
-            </job>
-          </jobs>
+          <jobs/>
+          <job>
+            <name>Cats SRL</name>
+            <title>Machine Learning Enginer</title>
+            <period>2015-</period>
+          </job>
+          <job/>
+          <job/>
+          <job/>
         </cv>
       </xml>
       <xml>
         <fb>
-          <name>Miruna Gherasim</name>
+          <name>Andrei Ionescu</name>
           <interests>
-            <interest>cats</interest>
+            <interest>technology</interest>
             <interest>programming</interest>
+            <interest>cats</interest>
             <interest>dogs</interest>
             <interest>cookie</interest>
           </interests>
@@ -292,23 +207,29 @@
       <user>
         <xml>
           <userDetails>
-            <username>mir</username>
+            <username>mirri</username>
             <password>123</password>
           </userDetails>
           <transcript>
-            <membershipName>miruorg<title>CEO</title><description>good things</description><period>2018-2019</period></membershipName>
+            <membershipName>best<title>fr</title><description>money</description><period>2017-2019</period></membershipName>
             <schools>
-              <school>University Poli</school>
-              <subject>Semantic Web</subject>
+              <school>Poli University</school>
+              <subject>Sem Web</subject>
               <yearStarted>2019</yearStarted>
               <yearEnded>2020</yearEnded>
-              <keyword>programming</keyword>
-              <grade>10</grade>
+              <keyword>technology</keyword>
+              <grade>5</grade>
               <gradYear>2020</gradYear>
+              <subject>WAD</subject>
+              <yearStarted>2019</yearStarted>
+              <yearEnded>2019</yearEnded>
+              <keyword>technology</keyword>
+              <grade>9</grade>
+              <gradYear>2019</gradYear>
               <extraSubjects>
-                <subjectExtra>Math</subjectExtra>
+                <subjectExtra>More</subjectExtra>
                 <keywordExtra>math</keywordExtra>
-                <gradYearExtra>7</gradYearExtra>
+                <gradYearExtra>2020</gradYearExtra>
               </extraSubjects>
             </schools>
           </transcript>
@@ -326,23 +247,101 @@
               <year/>
             </awards>
             <skills>
-              <skill>prgramming</skill>
-              <skill>reading</skill>
+              <skill>programming</skill>
+              <skill>paiting</skill>
               <skill>PHP</skill>
             </skills>
             <jobs>
-              <name>Bunny srl</name>
+              <name>Miru srl</name>
               <title>Junior DevOps</title>
               <period>2019-</period>
-              <name/>
-              <title/>
-              <period/>
-              <name/>
-              <title/>
-              <period/>
-              <name/>
-              <title/>
-              <period/>
+              <name>Bunny srl</name>
+              <title>Junior Web Programmer</title>
+              <period>2015-1029</period>
+              <job>aaa</job>
+              <title>aa</title>
+              <title>aa</title>
+              <job>miri</job>
+              <title>mm</title>
+              <title>as</title>
+              <job>ed</job>
+              <title>afefe</title>
+              <title>af</title>
+              <job>safd</job>
+              <title>aef</title>
+              <title>aef</title>
+              <job>dadw</job>
+              <title>wdad</title>
+              <title>dwa</title>
+              <job>sad</job>
+              <title>das</title>
+              <title>dsa</title>
+              <job>dasd</job>
+              <title>das</title>
+              <title>das</title>
+              <job>dasd</job>
+              <title>sad</title>
+              <title>sad</title>
+              <job>
+                <name>das</name>
+                <title>das</title>
+                <title>da</title>
+              </job>
+              <job>
+                <name>sad</name>
+                <title>das</title>
+                <title>dsad</title>
+              </job>
+              <job>
+                <name>fds</name>
+                <title>dsad</title>
+                <title>daed</title>
+              </job>
+              <job>
+                <name>ASDFF</name>
+                <title>ASD</title>
+                <title>ADSF</title>
+              </job>
+              <job>
+                <name>dasdas</name>
+                <title>sad</title>
+                <title>dsad</title>
+              </job>
+              <job>
+                <name>dasdas</name>
+                <title>sad</title>
+                <title>dsad</title>
+              </job>
+              <job>
+                <name>dasdas</name>
+                <title>sad</title>
+                <title>dsad</title>
+              </job>
+              <job>
+                <name>dasdas</name>
+                <title>sad</title>
+                <title>dsad</title>
+              </job>
+              <job>
+                <name>dasdas</name>
+                <title>sad</title>
+                <title>dsad</title>
+              </job>
+              <job>
+                <name>dasdas</name>
+                <title>sad</title>
+                <title>dsad</title>
+              </job>
+              <job>
+                <name>dasdas</name>
+                <title>sad</title>
+                <title>dsad</title>
+              </job>
+              <job>
+                <name>dasd</name>
+                <title>dsad</title>
+                <title>das</title>
+              </job>
             </jobs>
           </cv>
         </xml>
@@ -350,9 +349,10 @@
           <fb>
             <name>Miruna Gherasim</name>
             <interests>
+              <interest>cats</interest>
               <interest>programming</interest>
-              <interest>PHP</interest>
-              <interest>Python</interest>
+              <interest>dogs</interest>
+              <interest>cookie</interest>
             </interests>
           </fb>
         </xml>
@@ -393,7 +393,7 @@
                 <year/>
               </awards>
               <skills>
-                <skill>programming</skill>
+                <skill>prgramming</skill>
                 <skill>reading</skill>
                 <skill>PHP</skill>
               </skills>
@@ -417,7 +417,7 @@
             <fb>
               <name>Miruna Gherasim</name>
               <interests>
-                <interest>Programming</interest>
+                <interest>programming</interest>
                 <interest>PHP</interest>
                 <interest>Python</interest>
               </interests>
@@ -425,26 +425,68 @@
           </xml>
           <user>
             <xml>
+              <userDetails>
+                <username>mir</username>
+                <password>123</password>
+              </userDetails>
+              <transcript>
+                <membershipName>miruorg<title>CEO</title><description>good things</description><period>2018-2019</period></membershipName>
+                <schools>
+                  <school>University Poli</school>
+                  <subject>Semantic Web</subject>
+                  <yearStarted>2019</yearStarted>
+                  <yearEnded>2020</yearEnded>
+                  <keyword>programming</keyword>
+                  <grade>10</grade>
+                  <gradYear>2020</gradYear>
+                  <extraSubjects>
+                    <subjectExtra>Math</subjectExtra>
+                    <keywordExtra>math</keywordExtra>
+                    <gradYearExtra>7</gradYearExtra>
+                  </extraSubjects>
+                </schools>
+              </transcript>
+            </xml>
+            <xml>
               <cv>
-                <name>asd</name>
-                <gender/>
-                <website/>
-                <address/>
-                <telephone/>
-                <email/>
+                <name>Miruna Gherasim</name>
+                <gender>female</gender>
+                <website>miru.com</website>
+                <address>Stefan Stokca 20,bl17a,sc B, 65</address>
+                <telephone>+40729494427</telephone>
+                <email>mirunaalexandra97@gmail.com</email>
                 <awards>
                   <title/>
                   <year/>
                 </awards>
-                <skills/>
-                <jobs/>
+                <skills>
+                  <skill>programming</skill>
+                  <skill>reading</skill>
+                  <skill>PHP</skill>
+                </skills>
+                <jobs>
+                  <name>Bunny srl</name>
+                  <title>Junior DevOps</title>
+                  <period>2019-</period>
+                  <name/>
+                  <title/>
+                  <period/>
+                  <name/>
+                  <title/>
+                  <period/>
+                  <name/>
+                  <title/>
+                  <period/>
+                </jobs>
               </cv>
             </xml>
             <xml>
               <fb>
-                <name>das</name>
+                <name>Miruna Gherasim</name>
                 <interests>
-                  <interest>wad</interest>
+                  <interest>Programming</interest>
+                  <interest>PHP</interest>
+                  <interest>Python</interest>
                 </interests>
               </fb>
             </xml>
@@ -473,6 +515,32 @@
                   </interests>
                 </fb>
               </xml>
+              <user>
+                <xml>
+                  <cv>
+                    <name>asd</name>
+                    <gender/>
+                    <website/>
+                    <address/>
+                    <telephone/>
+                    <email/>
+                    <awards>
+                      <title/>
+                      <year/>
+                    </awards>
+                    <skills/>
+                    <jobs/>
+                  </cv>
+                </xml>
+                <xml>
+                  <fb>
+                    <name>das</name>
+                    <interests>
+                      <interest>wad</interest>
+                    </interests>
+                  </fb>
+                </xml>
+              </user>
             </user>
           </user>
         </user>

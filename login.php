@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
     <meta charset="UTF-8">
@@ -41,13 +41,13 @@
 <div class="container-fluid col-md-4 ">
     <form method="POST" action="LoginCheck.php">
     <div class="form-group">
-        <h5>Username</h5><input type="text" placeholder="Enter username" name="username" label="username" required>
+        <h5>Username</h5><input type="text" class="form-control" placeholder="Enter username" name="username" label="username" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
     </div>
 
     <div class="form-group">
-        <h5>Password</h5><input type="password" placeholder="Enter password" name="password" label="password" required>
+        <h5>Password</h5><input type="password" class="form-control"  placeholder="Enter password" name="password" label="password" required>
         <div class="valid-feedback">Valid.</div>
         <div class="invalid-feedback">Please fill out this field.</div>
     </div>

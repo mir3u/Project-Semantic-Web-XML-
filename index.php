@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
     <meta charset="UTF-8">
@@ -40,10 +40,10 @@
 <br><br> <br>
 <div class="container-fluid col-md-4 ">
     <?php if(isset($_SESSION["user"])){
-        echo "<button><a href=\"info.php\">See details & Make changes</a></button>";
+        echo "<button class='btn btn-outline-secondary'><a href=\"info.php\">See details & Make changes</a></button>";
     }else{
-        echo "<button ><a href=\"TranscriptForm.php\">Create New User</a></button>";
-        echo "<button><a href=\"login.php\">Login</a></button>";
+        echo "<button class='btn btn-outline-secondary'><a href=\"TranscriptForm.php\">Create New User</a></button>";
+        echo "<button class='btn btn-outline-secondary'><a href=\"login.php\">Login</a></button>";
     }?>
   </div>
 </body>

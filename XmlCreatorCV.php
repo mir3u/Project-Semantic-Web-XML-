@@ -22,6 +22,7 @@ $skills = $_POST["skills"];
 $jobs = $_POST["jobs"];
 $title = $_POST["title"];
 $period = $_POST["period"];
+
 $root = $xmlRoot->appendChild($domtree->createElement("cv"));
 $root->appendChild($domtree->createElement("name",$name));
 $root->appendChild($domtree->createElement("gender",$gender));
@@ -42,7 +43,7 @@ foreach ($skills as $skill){
 $jobr= $root->appendChild($domtree->createElement("jobs"));
 foreach ($jobs as $key=>$value){
     if($value!=null){
-    $jobi= $root->appendChild($domtree->createElement("job"));
+    $jobi= $jobr->appendChild($domtree->createElement("job"));
         $jobi->appendChild($domtree->createElement("name",$jobs[$key]));
         $jobi->appendChild($domtree->createElement("title",$title[$key]));
         $jobi->appendChild($domtree->createElement("period",$period[$key]));

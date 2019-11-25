@@ -4,7 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
     <meta charset="UTF-8">
@@ -41,7 +41,7 @@
     <form method="POST" action="XmlCreatorFB.php">
         <h4>Personal Information</h4>
         <div class="form-group">
-            <h5>Facebook Name</h5><input type="text" placeholder="John Smith" name="name" label="name" required>
+            <h5>Facebook Name</h5><input type="text" class="form-control" placeholder="John Smith" name="name" label="name" required>
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
@@ -67,7 +67,7 @@
             e.preventDefault();
             if (x < max_fields) {
                 x++;
-                $(wrapper).append('<div><label>Interest '+x+'</label><input type="text" placeholder="Programming" name="interests[]"/><a href="#" class="delete">X</a></div>');
+                $(wrapper).append('<div><label>Interest '+x+'</label><input type="text" class="form-control" placeholder="Programming" name="interests[]"/><a href="#" class="delete">X</a></div>');
             } else {
                 alert('You Reached the limits')
             }

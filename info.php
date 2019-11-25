@@ -6,7 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
     <meta charset="UTF-8">
@@ -42,14 +42,16 @@
 <div class="container-fluid col-md-6 ">
 
     <?php
+    if(isset($_SESSION["user"])){
     $user =$_SESSION["user"];
+    echo "<h4><b> Hi ".$user."!</b></h4>";
     $xml=simplexml_load_file($user."Output.xml") or die("Error: Cannot create object");
-    $result = $xml->xpath("//subjects/subject/keyword/text()='programming'");
-    echo "<h5> The number of subjects related to technologies ". count($result)."</h5>";
+    $result = $xml->xpath("//subjects/keyword/text()[.='technology']");
+    echo "<h5> The number of subjects related to technologies: ". count($result)."</h5>";
    $result = $xml->xpath("/user/xml/transcript/schools/extraSubjects/gradYearExtra/text()");
    $subj = $xml->xpath("/user/xml/transcript/schools/extraSubjects/subjectExtra/text()");
 
-   echo "<h4> The extra courses: </h4>";
+   echo "<h5> The extra courses: </h5>";
    $i = count($result);
    $j=0;
    foreach ($result as $key=>$value){
@@ -72,10 +74,10 @@
     <div class="form-group ">
             <h5 >Add a new Job</h5>
             <div class="container1">
-            <button class="add_form_field"><span style="font-size:16px; font-weight:bold;">+ </span></button>
+            <button style="margin: 10px;" class="add_form_field btn btn-outline-secondary"><span style="font-size:16px; font-weight:bold;">+ </span></button>
             <br>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit " class="btn btn-primary">Submit</button>
     </div>
 <?php
     $xml1=simplexml_load_file("Output.xml") or die("Error: Cannot create object");
@@ -91,11 +93,23 @@
            $name = $xmls->xpath("//username/text()");
            $extra = $xmls->xpath("//extraSubjects/subjectExtra/text()");
            echo "<li> <label><b> Name: ".$name[0]."</b></label></li>";
+           $i=0;
+           $j=count($extra);
            foreach ($extra as $ex){
-               echo "<li> <label> Extra Course: ".$ex."</label></li>";
+               if($i!=$j/2) {
+                   echo "<li> <label> Extra Course: " . $ex . "</label></li>";
+                   $i++;
+               }elseif ($j==1){
+                   echo "<li> <label> Extra Course: " . $ex . "</label></li>";
+                   break;
+               }
            }
        }
    }
+}else{
+        echo "<h5> Please log in to see details</h5>
+        <a  href=\"login.php\">Login</a>";
+}
     ?>
 </div>
 <script>
@@ -108,9 +122,9 @@
             e.preventDefault();
             if (x < max_fields) {
                 x++;
-                $(wrapper).append(' <h5>Previous Job</h5><input type="text" placeholder="SW inc" name="jobs[]" label="jobs[]" >' +
-                    ' <h5>Title</h5><input type="text" placeholder="Junior Web Developer" name="title[]" label="title[]" >' +
-                    '<h5>Period</h5><input type="text" placeholder="2012-2023" name="period[]" label="period[]" ><a href="#" class="delete">X</a></div>');
+                $(wrapper).append(' <h5>Previous Job</h5><input type="text" class="form-control" placeholder="SW inc" name="jobs[]" label="jobs[]" >' +
+                    ' <h5>Title</h5><input type="text" class="form-control" placeholder="Junior Web Developer" name="title[]" label="title[]" >' +
+                    '<h5>Period</h5><input type="text" class="form-control" placeholder="2012-2023" name="period[]" label="period[]" ><a href="#" class="delete">X</a></div>');
             } else {
                 alert('You Reached the limits')
             }

@@ -5,6 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/styles.css">
@@ -42,13 +43,13 @@
     <form method="POST" action="XmlCreator.php">
         <h4>Personal Information</h4>
         <div class="form-group">
-            <h5>Username</h5><input type="text" placeholder="Enter username" name="username" label="username" required>
+            <h5>Username</h5><input type="text" class="form-control" placeholder="Enter username" name="username" label="username" required>
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
 
         <div class="form-group">
-            <h5>Password</h5><input type="password" placeholder="Enter password" name="password" label="password" required>
+            <h5>Password</h5><input type="password" class="form-control" placeholder="Enter password" name="password" label="password" required>
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
         </div>
@@ -58,22 +59,22 @@
         <h4>Educational Background</h4>
         <h5>Memberships</h5>
         <div class="form-group">
-            <label>Name Org</label><input type="text" placeholder="membership" name="membership" label="membership"><br>
-            <label>Title</label><input type="text" placeholder="title" name="title" label="title"><br>
-            <label>Description</label><input type="text" placeholder="description" name="description" label="description"><br>
-            <label>Period</label><input type="text" placeholder="period" name="period" label="period"><br>
+            <label>Name Org</label><input type="text" class="form-control" placeholder="membership" name="membership" label="membership"><br>
+            <label>Title</label><input type="text" class="form-control" placeholder="title" name="title" label="title"><br>
+            <label>Description</label><input type="text" class="form-control" placeholder="description" name="description" label="description"><br>
+            <label>Period</label><input type="text" class="form-control" placeholder="period" name="period" label="period"><br>
         </div>
         <div class="form-group ">
             <h5 >Schools Graduated</h5>
             <div class="container1">
-            <button class="add_form_field"><span style="font-size:16px; font-weight:bold;">+ </span></button>
-              <h5>Subjects Studied</h5><button class="add_new_subject">+</button>
-                <h5>Extra</h5><button class="add_extra">+</button>
+            <button class="add_form_field btn btn-outline-secondary" style="margin: 10px;"><span style="font-size:16px; font-weight:bold;">+ </span></button>
+              <h5>Subjects Studied</h5><button class="add_new_subject btn btn-outline-secondary" style="margin: 10px;">+</button>
+                <h5>Extra</h5><button class="add_extra btn btn-outline-secondary" style="margin: 10px;">+</button>
             <br>
         </div>
     </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" style="margin: 10px;">Submit</button>
 
     </form>
 </div>
@@ -88,7 +89,7 @@
             e.preventDefault();
             if (x < max_fields) {
                 x++;
-                $(wrapper).append('<div><label>School '+x+'</label><input type="text" placeholder="University Politechnica" name="school[]"/><a href="#" class="delete">X</a></div>');
+                $(wrapper).append('<div><label>School '+x+'</label><input type="text" class="form-control" placeholder="University Politechnica" name="school[]"/><a href="#" class="delete">X</a></div>');
             } else {
                 alert('You Reached the limits')
             }
@@ -100,12 +101,12 @@
                 i++;
                 let m=x-1;
                 console.log(m);
-                $('.container1').append('<div><label>Subject Studied '+i+'</label> <input type="text" placeholder="Semantic Web" name="subjects'+m+'[]"/>'+
-                '<br>Year Started</label> <input type="text" placeholder="2019" name="yearStarted'+m+'[]"/><br>'+
-                '<label>Year Ended</label> <input type="text" placeholder="2020" name="yearEnded'+m+'[]"/><br>'+
-                    '<label>Keywords</label> <input type="text" placeholder="seweb" name="keyword'+m+'[]"/><br>'+
-                    '<label>Grades</label> <input type="text" placeholder="9" name="grade'+m+'[]"/><br>' +
-                    '<label>Year Of Graduation</label> <input type="text" placeholder="9" name="gradYear'+m+'[]"/><br>' +
+                $('.container1').append('<div><label>Subject Studied '+i+'</label> <input type="text" class="form-control" placeholder="Semantic Web" name="subjects'+m+'[]"/>'+
+                '<br>Year Started</label> <input type="text" class="form-control" placeholder="2019" name="yearStarted'+m+'[]"/><br>'+
+                '<label>Year Ended</label> <input type="text" class="form-control" placeholder="2020" name="yearEnded'+m+'[]"/><br>'+
+                    '<label>Keywords</label> <input type="text" class="form-control" placeholder="seweb" name="keyword'+m+'[]"/><br>'+
+                    '<label>Grades</label> <input type="text" class="form-control" placeholder="9" name="grade'+m+'[]"/><br>' +
+                    '<label>Year Of Graduation</label> <input type="text" class="form-control" placeholder="9" name="gradYear'+m+'[]"/><br>' +
                     '<a href="#" class="delete">X</a></div>');
             }
         });
@@ -115,9 +116,9 @@
             if (j < max_fields) {
                 j++;
                 let m=x-1;
-                $('.container1').append('<div><label>Extra Subject Studied '+i+'</label> <input type="text" placeholder="Semantic Web" name="subjectsExtra'+m+'[]"/>'+
-                    '<br><label>Keywords</label> <input type="text" placeholder="seweb" name="keywordExtra'+m+'[]"/>'+
-                    '<br><label>Year Of Graduation</label> <input type="text" placeholder="9" name="gradYearExtra'+m+'[]"/>' +
+                $('.container1').append('<div><label>Extra Subject Studied '+i+'</label> <input type="text" class="form-control" placeholder="Semantic Web" name="subjectsExtra'+m+'[]"/>'+
+                    '<br><label>Keywords</label> <input type="text"class="form-control"  placeholder="seweb" name="keywordExtra'+m+'[]"/>'+
+                    '<br><label>Year Of Graduation</label> <input type="text" class="form-control" placeholder="9" name="gradYearExtra'+m+'[]"/>' +
                     '<a href="#" class="delete">X</a></div>');
             }
         });

@@ -14,11 +14,15 @@ $xmlRoot = $domtree->appendChild($xmlRoot);
 
 $uname = $_POST['username'];
 $pass = $_POST['password'];
+
+
 $xmljobs = new DOMDocument("1.0","UTF-8");
 $xmljobs->load('users.xml');
+$xmljobs->getElementById('root');
 $domtree1 = $xmljobs->getElementsByTagName("users")->item(0);
-$root->appendChild($domtree1->createElement("user",$uname));
-$domtree1->save("users.xml");
+var_dump($domtree1);
+$domtree1->appendChild($xmljobs->createElement("user",$uname));
+$xmljobs->save("users.xml");
 
 $_SESSION['usr'] = $uname;
 $arry = ["uname"=>$uname,"pass"=>$pass];
