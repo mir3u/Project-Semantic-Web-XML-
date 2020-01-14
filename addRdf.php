@@ -1,4 +1,7 @@
-<?php session_start()?>
+<?php
+session_start();
+require 'vendor/autoload.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +9,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
     <link rel="stylesheet" href="/styles.css">
     <meta charset="UTF-8">
     <title>Hello</title>
@@ -15,10 +18,10 @@
 <body>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-        <div class="level-item has-text-left">
-        <a  href="index.php">Project Semantic Web</a>-->
-        </div>
-        <div class="level-item has-text-right">
+        <a class="navbar-brand" href="index.php">Project Semantic Web</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
             <ul class="navbar-nav m-auto">
                 <li class="nav-item">
@@ -36,21 +39,18 @@
                 ?>
             </ul>
         </div>
-        </div>
     </div>
-</nav>
-<br><br> <br>
+</nav><br><br> <br>
+
 <div class="container is-fluid ">
     <div class="level-item has-text-centered">
-    <?php if(isset($_SESSION["user"])){
-        echo "<a href=\"info.php\"><button class='button is-primary is-rounded'>See details & Make changes</button></a>";
-        echo "<a href=\"http://localhost:8080/Project_war_exploded/\"><button class=\"button is-primary is-rounded\">Add RDF file</button></a>";
-    }else{
-        echo "<a href=\"TranscriptForm.php\"><button class='btn btn-outline-secondary' style='margin: 10px;'>Create New User</button</a>>";
-        echo "<a href=\"login.php\"><button class='btn btn-outline-secondary' style='margin: 10px;'>Login</button></a>";
-    }?>
+<form action = "uploadRDF.php" method = "POST" enctype = "multipart/form-data">
+    <h4> Upload RDF File</h4>
+    <input type = "file" name = "rdf" />
     </div>
-  </div>
-</body>
-</html>
+    <div class="level-item has-text-centered">
+    <input class="button is-info is-rounded"  type = "submit"/>
+</form>
+    </div>
 
+</div>
